@@ -1,0 +1,725 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A9EEE1142596AECECA6A08A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375B3D7EAEC6530B285B6A7 /* ContentView.swift */; };
+		0EFA1F30731FC2EF9DCA690F /* WorkoutSyncPhoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F24209238588F220360720 /* WorkoutSyncPhoneApp.swift */; };
+		11D9BE0492C49F9422089D18 /* CaptureGuard in Frameworks */ = {isa = PBXBuildFile; productRef = 95ACE008835190F50FFB2B41 /* CaptureGuard */; };
+		1EC5151C270386AA4D5F664C /* TransportKit in Frameworks */ = {isa = PBXBuildFile; productRef = 70A9D9623BE3832E9C71CBED /* TransportKit */; };
+		425E77507DD894B7CEFA3515 /* OverlayKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6C8A787379902A53EE525E08 /* OverlayKit */; };
+		551D187C39750630ED51F47D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A79D2375C4938333FCD46D16 /* Assets.xcassets */; };
+		55412ACB24D3A857DB704730 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12473247E8B1AD3F4A87B468 /* ContentView.swift */; };
+		62E1B02D169D9AB93F8AB1F4 /* RelayKit in Frameworks */ = {isa = PBXBuildFile; productRef = B25246BEA5F051F925D225F4 /* RelayKit */; };
+		70D39515FC064ED889612B72 /* sample_workout.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EB1CA72AA9887C5509D4AFF6 /* sample_workout.mp4 */; };
+		7D911EEC9FAD0186E38825B9 /* SimulatedWorkoutSampleSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E215CDC101CCCF8C4E1D45 /* SimulatedWorkoutSampleSource.swift */; };
+		7F03841C5CF0D1A4AC85B73C /* OverlayKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3FA5C3B9E597E253034274FE /* OverlayKit */; };
+		87D8574C17DE7CF571191524 /* TransportKit in Frameworks */ = {isa = PBXBuildFile; productRef = 600116EE616405436DCDBA88 /* TransportKit */; };
+		87F67E11BD61F771190AAFDD /* WorkoutSyncTVApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B27CF129F8D0F8F3D782B64 /* WorkoutSyncTVApp.swift */; };
+		9A57904F392E3B3E8E531FC0 /* WorkoutSyncWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7559B7AE6024AF51C5C87AC1 /* WorkoutSyncWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9A80A0D949207D803871B0F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE20143DFA388CD6DBEF89A /* ContentView.swift */; };
+		BF01B9401A10B37944D80CDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AE14D303598A16DE3D78DEC /* Assets.xcassets */; };
+		C8A9BEFB1B3587213685A238 /* WorkoutSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E83BA694FC0F852FA04B4CA /* WorkoutSessionManager.swift */; };
+		DF5832BB2CA2CA1E0D2B450F /* RelayKit in Frameworks */ = {isa = PBXBuildFile; productRef = BE2BBFE1DCA3B85D2E191996 /* RelayKit */; };
+		E7E532A35837642A227FE732 /* sample_workout.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DFF56BAF7B791D0206BA7736 /* sample_workout.mp4 */; };
+		EEF8066D8319CA3F827B7D90 /* WorkoutSyncWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257ECD317D8E7F8588DD5D7F /* WorkoutSyncWatchApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		66712B73F40446BD62EB2E18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E79BC621E726B424F98BD14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C982E1E95E33F298AEEDD413;
+			remoteInfo = WorkoutSyncWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C52B217FC413504D34A3AF63 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				9A57904F392E3B3E8E531FC0 /* WorkoutSyncWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		02F2604E405FBAAC66EB7773 /* WorkoutSyncTV.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = WorkoutSyncTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		12473247E8B1AD3F4A87B468 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		257ECD317D8E7F8588DD5D7F /* WorkoutSyncWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSyncWatchApp.swift; sourceTree = "<group>"; };
+		28951E2CF6BD563E28B7AB65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		32659EA990E571F61525AF57 /* TransportKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = TransportKit; path = Packages/TransportKit; sourceTree = SOURCE_ROOT; };
+		33AE57B609F01EC66BD8A02D /* RelayKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = RelayKit; path = Packages/RelayKit; sourceTree = SOURCE_ROOT; };
+		3B27CF129F8D0F8F3D782B64 /* WorkoutSyncTVApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSyncTVApp.swift; sourceTree = "<group>"; };
+		3DF2EB2A31A3E18C956E5754 /* OverlayKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = OverlayKit; path = Packages/OverlayKit; sourceTree = SOURCE_ROOT; };
+		44F24209238588F220360720 /* WorkoutSyncPhoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSyncPhoneApp.swift; sourceTree = "<group>"; };
+		4CD943FC42F0838F88A38376 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		58E215CDC101CCCF8C4E1D45 /* SimulatedWorkoutSampleSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatedWorkoutSampleSource.swift; sourceTree = "<group>"; };
+		5E83BA694FC0F852FA04B4CA /* WorkoutSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSessionManager.swift; sourceTree = "<group>"; };
+		6E2B2BFA6C9BCED698990729 /* WorkoutSyncPhone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WorkoutSyncPhone.entitlements; sourceTree = "<group>"; };
+		7559B7AE6024AF51C5C87AC1 /* WorkoutSyncWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutSyncWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AE14D303598A16DE3D78DEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7BF7984B1209CAFC023A7C98 /* CaptureGuard */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CaptureGuard; path = Packages/CaptureGuard; sourceTree = SOURCE_ROOT; };
+		86F5F03A2E42120D38FDE755 /* WorkoutSyncWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WorkoutSyncWatch.entitlements; sourceTree = "<group>"; };
+		9CE20143DFA388CD6DBEF89A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9D4E7D6B205D179B7032B034 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A79D2375C4938333FCD46D16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B3DBDA83F962EC5F24BB06B1 /* WorkoutSyncPhone.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = WorkoutSyncPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D375B3D7EAEC6530B285B6A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DFF56BAF7B791D0206BA7736 /* sample_workout.mp4 */ = {isa = PBXFileReference; path = sample_workout.mp4; sourceTree = "<group>"; };
+		EB1CA72AA9887C5509D4AFF6 /* sample_workout.mp4 */ = {isa = PBXFileReference; path = sample_workout.mp4; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09FD20532E0609046827F624 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				425E77507DD894B7CEFA3515 /* OverlayKit in Frameworks */,
+				DF5832BB2CA2CA1E0D2B450F /* RelayKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D22F2E1A26FFD1097881EE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87D8574C17DE7CF571191524 /* TransportKit in Frameworks */,
+				7F03841C5CF0D1A4AC85B73C /* OverlayKit in Frameworks */,
+				62E1B02D169D9AB93F8AB1F4 /* RelayKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7844E377A07B65E38D00258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EC5151C270386AA4D5F664C /* TransportKit in Frameworks */,
+				11D9BE0492C49F9422089D18 /* CaptureGuard in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1100DC9C52042DF890EA8DB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3DBDA83F962EC5F24BB06B1 /* WorkoutSyncPhone.app */,
+				02F2604E405FBAAC66EB7773 /* WorkoutSyncTV.app */,
+				7559B7AE6024AF51C5C87AC1 /* WorkoutSyncWatch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14F47F7A3CA1D0FEA20397BB = {
+			isa = PBXGroup;
+			children = (
+				31F53B4838F9079A6CB421CB /* Apps */,
+				8053084C0EC5850D65A2593C /* Packages */,
+				1100DC9C52042DF890EA8DB1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		31F53B4838F9079A6CB421CB /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				D129E7846B60112E373F851F /* WorkoutSyncPhone */,
+				B52469CF57795BE8399B5EAF /* WorkoutSyncTV */,
+				C4F5A9978253C714D9695A80 /* WorkoutSyncWatch */,
+			);
+			path = Apps;
+			sourceTree = "<group>";
+		};
+		62A24AA559B995A3A8D296BB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DFF56BAF7B791D0206BA7736 /* sample_workout.mp4 */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8053084C0EC5850D65A2593C /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				7BF7984B1209CAFC023A7C98 /* CaptureGuard */,
+				3DF2EB2A31A3E18C956E5754 /* OverlayKit */,
+				33AE57B609F01EC66BD8A02D /* RelayKit */,
+				32659EA990E571F61525AF57 /* TransportKit */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		B52469CF57795BE8399B5EAF /* WorkoutSyncTV */ = {
+			isa = PBXGroup;
+			children = (
+				9CE20143DFA388CD6DBEF89A /* ContentView.swift */,
+				9D4E7D6B205D179B7032B034 /* Info.plist */,
+				3B27CF129F8D0F8F3D782B64 /* WorkoutSyncTVApp.swift */,
+				F9C6AE7DB222948462583D81 /* Resources */,
+			);
+			path = WorkoutSyncTV;
+			sourceTree = "<group>";
+		};
+		C4F5A9978253C714D9695A80 /* WorkoutSyncWatch */ = {
+			isa = PBXGroup;
+			children = (
+				7AE14D303598A16DE3D78DEC /* Assets.xcassets */,
+				12473247E8B1AD3F4A87B468 /* ContentView.swift */,
+				4CD943FC42F0838F88A38376 /* Info.plist */,
+				5E83BA694FC0F852FA04B4CA /* WorkoutSessionManager.swift */,
+				86F5F03A2E42120D38FDE755 /* WorkoutSyncWatch.entitlements */,
+				257ECD317D8E7F8588DD5D7F /* WorkoutSyncWatchApp.swift */,
+			);
+			path = WorkoutSyncWatch;
+			sourceTree = "<group>";
+		};
+		D129E7846B60112E373F851F /* WorkoutSyncPhone */ = {
+			isa = PBXGroup;
+			children = (
+				A79D2375C4938333FCD46D16 /* Assets.xcassets */,
+				D375B3D7EAEC6530B285B6A7 /* ContentView.swift */,
+				28951E2CF6BD563E28B7AB65 /* Info.plist */,
+				58E215CDC101CCCF8C4E1D45 /* SimulatedWorkoutSampleSource.swift */,
+				6E2B2BFA6C9BCED698990729 /* WorkoutSyncPhone.entitlements */,
+				44F24209238588F220360720 /* WorkoutSyncPhoneApp.swift */,
+				62A24AA559B995A3A8D296BB /* Resources */,
+			);
+			path = WorkoutSyncPhone;
+			sourceTree = "<group>";
+		};
+		F9C6AE7DB222948462583D81 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EB1CA72AA9887C5509D4AFF6 /* sample_workout.mp4 */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		28E603BF1530597C3D60B7ED /* WorkoutSyncPhone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90227B8CD57DB3AD2BF0B335 /* Build configuration list for PBXNativeTarget "WorkoutSyncPhone" */;
+			buildPhases = (
+				2ADCF852F7F0D5B114E82E05 /* Sources */,
+				B15CB08C05CC92C41FAE9E2F /* Resources */,
+				5D22F2E1A26FFD1097881EE6 /* Frameworks */,
+				C52B217FC413504D34A3AF63 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				39FC6A0388E85971CF733CCE /* PBXTargetDependency */,
+			);
+			name = WorkoutSyncPhone;
+			packageProductDependencies = (
+				600116EE616405436DCDBA88 /* TransportKit */,
+				3FA5C3B9E597E253034274FE /* OverlayKit */,
+				B25246BEA5F051F925D225F4 /* RelayKit */,
+			);
+			productName = WorkoutSyncPhone;
+			productReference = B3DBDA83F962EC5F24BB06B1 /* WorkoutSyncPhone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8BDB85CE2B4582C605136170 /* WorkoutSyncTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4085D2D1C5054AE55ADE55BA /* Build configuration list for PBXNativeTarget "WorkoutSyncTV" */;
+			buildPhases = (
+				60228EB5F3A1B035C7970D2C /* Sources */,
+				625E44735C8170589A15B5B6 /* Resources */,
+				09FD20532E0609046827F624 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WorkoutSyncTV;
+			packageProductDependencies = (
+				6C8A787379902A53EE525E08 /* OverlayKit */,
+				BE2BBFE1DCA3B85D2E191996 /* RelayKit */,
+			);
+			productName = WorkoutSyncTV;
+			productReference = 02F2604E405FBAAC66EB7773 /* WorkoutSyncTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C982E1E95E33F298AEEDD413 /* WorkoutSyncWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CF6DA3E323EED186161CD74 /* Build configuration list for PBXNativeTarget "WorkoutSyncWatch" */;
+			buildPhases = (
+				F9A39971FAF754BD7E95C145 /* Sources */,
+				8B06B71416FA018DECDC1EE2 /* Resources */,
+				E7844E377A07B65E38D00258 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WorkoutSyncWatch;
+			packageProductDependencies = (
+				70A9D9623BE3832E9C71CBED /* TransportKit */,
+				95ACE008835190F50FFB2B41 /* CaptureGuard */,
+			);
+			productName = WorkoutSyncWatch;
+			productReference = 7559B7AE6024AF51C5C87AC1 /* WorkoutSyncWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8E79BC621E726B424F98BD14 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					28E603BF1530597C3D60B7ED = {
+						ProvisioningStyle = Automatic;
+					};
+					8BDB85CE2B4582C605136170 = {
+						ProvisioningStyle = Automatic;
+					};
+					C982E1E95E33F298AEEDD413 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 62B69823E5F97AA0D0FD47BD /* Build configuration list for PBXProject "WorkoutSync" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 14F47F7A3CA1D0FEA20397BB;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A9D1B03CEEE82A9E39C4B9B9 /* XCLocalSwiftPackageReference "Packages/CaptureGuard" */,
+				D69B31361DC3B40872E2A2FF /* XCLocalSwiftPackageReference "Packages/OverlayKit" */,
+				9B030968AC662BE95530EC9A /* XCLocalSwiftPackageReference "Packages/RelayKit" */,
+				8C7CBDF2BAE8F707A546104A /* XCLocalSwiftPackageReference "Packages/TransportKit" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1100DC9C52042DF890EA8DB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C982E1E95E33F298AEEDD413 /* WorkoutSyncWatch */,
+				28E603BF1530597C3D60B7ED /* WorkoutSyncPhone */,
+				8BDB85CE2B4582C605136170 /* WorkoutSyncTV */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		625E44735C8170589A15B5B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70D39515FC064ED889612B72 /* sample_workout.mp4 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B06B71416FA018DECDC1EE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF01B9401A10B37944D80CDE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B15CB08C05CC92C41FAE9E2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				551D187C39750630ED51F47D /* Assets.xcassets in Resources */,
+				E7E532A35837642A227FE732 /* sample_workout.mp4 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2ADCF852F7F0D5B114E82E05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A9EEE1142596AECECA6A08A /* ContentView.swift in Sources */,
+				7D911EEC9FAD0186E38825B9 /* SimulatedWorkoutSampleSource.swift in Sources */,
+				0EFA1F30731FC2EF9DCA690F /* WorkoutSyncPhoneApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60228EB5F3A1B035C7970D2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A80A0D949207D803871B0F5 /* ContentView.swift in Sources */,
+				87F67E11BD61F771190AAFDD /* WorkoutSyncTVApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9A39971FAF754BD7E95C145 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55412ACB24D3A857DB704730 /* ContentView.swift in Sources */,
+				C8A9BEFB1B3587213685A238 /* WorkoutSessionManager.swift in Sources */,
+				EEF8066D8319CA3F827B7D90 /* WorkoutSyncWatchApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		39FC6A0388E85971CF733CCE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C982E1E95E33F298AEEDD413 /* WorkoutSyncWatch */;
+			targetProxy = 66712B73F40446BD62EB2E18 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		265A79603896ED17CBD86C88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Apps/WorkoutSyncPhone/WorkoutSyncPhone.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Apps/WorkoutSyncPhone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saraworkoutsync.WorkoutSyncPhone;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		271ABBA730764EEC5A915B9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Apps/WorkoutSyncPhone/WorkoutSyncPhone.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Apps/WorkoutSyncPhone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saraworkoutsync.WorkoutSyncPhone;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		61B0EC0C4FF64F006A3CFC93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Apps/WorkoutSyncWatch/WorkoutSyncWatch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Apps/WorkoutSyncWatch/Info.plist;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saraworkoutsync.WorkoutSyncPhone.watchkitapp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		7239E8372F7A9EA863B3A719 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Apps/WorkoutSyncTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saraworkoutsync.WorkoutSyncTV;
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		8AD5CFD5BB890E36603B867F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		D8C36BB97E18DED6B5AE5CDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Apps/WorkoutSyncTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saraworkoutsync.WorkoutSyncTV;
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+		EDD351C3879B8B7E6EE43E8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Apps/WorkoutSyncWatch/WorkoutSyncWatch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Apps/WorkoutSyncWatch/Info.plist;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saraworkoutsync.WorkoutSyncPhone.watchkitapp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Release;
+		};
+		F55F286AB8953217AAA9F11D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CF6DA3E323EED186161CD74 /* Build configuration list for PBXNativeTarget "WorkoutSyncWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61B0EC0C4FF64F006A3CFC93 /* Debug */,
+				EDD351C3879B8B7E6EE43E8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4085D2D1C5054AE55ADE55BA /* Build configuration list for PBXNativeTarget "WorkoutSyncTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7239E8372F7A9EA863B3A719 /* Debug */,
+				D8C36BB97E18DED6B5AE5CDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		62B69823E5F97AA0D0FD47BD /* Build configuration list for PBXProject "WorkoutSync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AD5CFD5BB890E36603B867F /* Debug */,
+				F55F286AB8953217AAA9F11D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		90227B8CD57DB3AD2BF0B335 /* Build configuration list for PBXNativeTarget "WorkoutSyncPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				265A79603896ED17CBD86C88 /* Debug */,
+				271ABBA730764EEC5A915B9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		8C7CBDF2BAE8F707A546104A /* XCLocalSwiftPackageReference "Packages/TransportKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/TransportKit;
+		};
+		9B030968AC662BE95530EC9A /* XCLocalSwiftPackageReference "Packages/RelayKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/RelayKit;
+		};
+		A9D1B03CEEE82A9E39C4B9B9 /* XCLocalSwiftPackageReference "Packages/CaptureGuard" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/CaptureGuard;
+		};
+		D69B31361DC3B40872E2A2FF /* XCLocalSwiftPackageReference "Packages/OverlayKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/OverlayKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3FA5C3B9E597E253034274FE /* OverlayKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = OverlayKit;
+		};
+		600116EE616405436DCDBA88 /* TransportKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TransportKit;
+		};
+		6C8A787379902A53EE525E08 /* OverlayKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = OverlayKit;
+		};
+		70A9D9623BE3832E9C71CBED /* TransportKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TransportKit;
+		};
+		95ACE008835190F50FFB2B41 /* CaptureGuard */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CaptureGuard;
+		};
+		B25246BEA5F051F925D225F4 /* RelayKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RelayKit;
+		};
+		BE2BBFE1DCA3B85D2E191996 /* RelayKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RelayKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 8E79BC621E726B424F98BD14 /* Project object */;
+}
