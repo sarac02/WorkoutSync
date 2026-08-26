@@ -13,20 +13,55 @@ Apple TV.
 
 ## Architecture
 
+```mermaid
+flowchart LR
+    subgraph Watch["⌚ Apple Watch"]
+        direction TB
+        HK["HKWorkoutSession /\nHKLiveWorkoutBuilder"]
+        CG["CaptureGuard\n(plausibility gate)"]
+        WT["WorkoutTransport\n(TransportKit)"]
+        HK --> CG --> WT
+    end
+
+    subgraph Phone["📱 iPhone"]
+        direction TB
+        WCT["WCTransportSession\n(CTransport, Obj-C++)"]
+        OTP["WorkoutOverlayTimeline\n(OverlayKit)"]
+        VOCP["VideoOverlayContainer"]
+        RH["WorkoutRelayHost\n(RelayKit + pairing code)"]
+        WCT --> OTP --> VOCP
+        WCT -.-> RH
+    end
+
+    subgraph TV["📺 Apple TV"]
+        direction TB
+        RC["WorkoutRelayClient\n(RelayKit + own clock sync)"]
+        OTT["WorkoutOverlayTimeline\n(OverlayKit)"]
+        VOCT["VideoOverlayContainer"]
+        RC --> OTT --> VOCT
+    end
+
+    WT == "WatchConnectivity\nbinary frames + clock-sync pings" ==> WCT
+    RH == "MultipeerConnectivity\ntagged frames + own clock-sync" ==> RC
+
+    subgraph Shared["Shared foundation (pure Swift/C++, no Apple frameworks)"]
+        WM["WorkoutModel\n(sample type + protocol)"]
+        WC["WireCodec\n(wire format + clock-offset math)"]
+    end
+
+    WM -.-> HK
+    WM -.-> WCT
+    WM -.-> RC
+    WC -.-> WT
+    WC -.-> WCT
+    WC -.-> RC
 ```
- Apple Watch                    iPhone / iPad                  Apple TV
-┌───────────────┐   WatchConnectivity   ┌──────────────────┐  Multipeer  ┌──────────────────┐
-│ HKWorkoutSession/│ ───────────────────▶│ WCTransportSession│────────────▶│ WorkoutRelayClient│
-│ HKLiveWorkoutBuilder                   │  (CTransport,     │  (relayed   │  (RelayKit)       │
-│  → WorkoutTransport                    │   Obj-C++)        │   1 hop)    │        │          │
-└───────────────┘                        │        │          │            │        ▼          │
-                                          │        ▼          │            │ WorkoutOverlayTimeline
-                                          │ WorkoutOverlayTimeline          │        │          │
-                                          │        │          │            │        ▼          │
-                                          │        ▼          │            │ VideoOverlayContainer
-                                          │ VideoOverlayContainer           └──────────────────┘
-                                          └──────────────────┘
-```
+
+Each device runs the same shape of pipeline — read/receive data, correct its
+clock, interpolate it, render it — the only thing that changes is *where*
+the data enters. The Watch is the one true source; the iPhone and Apple TV
+are both just consumers of a corrected, interpolated stream, which is why
+`OverlayKit`'s rendering code is identical on both.
 
 Five local Swift packages, split by platform reach rather than by feature —
 this is what let most of it actually get built and run on a Mac with no iOS
