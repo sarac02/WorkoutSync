@@ -14,47 +14,58 @@ Apple TV.
 ## Architecture
 
 ```mermaid
-flowchart LR
+flowchart TB
+    subgraph Shared["Shared foundation — pure Swift/C++, no Apple frameworks"]
+        direction LR
+        WM["WorkoutModel<br/>sample type + protocol"]
+        WC["WireCodec<br/>wire format + clock-offset math"]
+    end
+
     subgraph Watch["⌚ Apple Watch"]
         direction TB
-        HK["HKWorkoutSession /\nHKLiveWorkoutBuilder"]
-        CG["CaptureGuard\n(plausibility gate)"]
-        WT["WorkoutTransport\n(TransportKit)"]
+        HK["HKWorkoutSession /<br/>HKLiveWorkoutBuilder"]
+        CG["CaptureGuard<br/>plausibility gate"]
+        WT["WorkoutTransport"]
         HK --> CG --> WT
     end
 
     subgraph Phone["📱 iPhone"]
         direction TB
-        WCT["WCTransportSession\n(CTransport, Obj-C++)"]
-        OTP["WorkoutOverlayTimeline\n(OverlayKit)"]
+        WCT["WCTransportSession<br/>CTransport, Obj-C++"]
+        OTP["WorkoutOverlayTimeline"]
         VOCP["VideoOverlayContainer"]
-        RH["WorkoutRelayHost\n(RelayKit + pairing code)"]
+        RH["WorkoutRelayHost<br/>+ pairing code"]
         WCT --> OTP --> VOCP
-        WCT -.-> RH
+        WCT --> RH
     end
 
     subgraph TV["📺 Apple TV"]
         direction TB
-        RC["WorkoutRelayClient\n(RelayKit + own clock sync)"]
-        OTT["WorkoutOverlayTimeline\n(OverlayKit)"]
+        RC["WorkoutRelayClient<br/>+ own clock sync"]
+        OTT["WorkoutOverlayTimeline"]
         VOCT["VideoOverlayContainer"]
         RC --> OTT --> VOCT
     end
 
-    WT == "WatchConnectivity\nbinary frames + clock-sync pings" ==> WCT
-    RH == "MultipeerConnectivity\ntagged frames + own clock-sync" ==> RC
+    WT ==>|"WatchConnectivity<br/>binary + clock-sync"| WCT
+    RH ==>|"MultipeerConnectivity<br/>tagged + clock-sync"| RC
 
-    subgraph Shared["Shared foundation (pure Swift/C++, no Apple frameworks)"]
-        WM["WorkoutModel\n(sample type + protocol)"]
-        WC["WireCodec\n(wire format + clock-offset math)"]
-    end
+    Shared -.-> Watch
+    Shared -.-> Phone
+    Shared -.-> TV
 
-    WM -.-> HK
-    WM -.-> WCT
-    WM -.-> RC
-    WC -.-> WT
-    WC -.-> WCT
-    WC -.-> RC
+    classDef watch fill:#eef6ff,stroke:#3b7dd8,color:#1a3a5c
+    classDef phone fill:#eafbea,stroke:#3fa34d,color:#1d4a24
+    classDef tv fill:#f5eefc,stroke:#8a4fd1,color:#3d2160
+    classDef shared fill:#f4f4f4,stroke:#888,color:#333
+    class HK,CG,WT watch
+    class WCT,OTP,VOCP,RH phone
+    class RC,OTT,VOCT tv
+    class WM,WC shared
+    style Watch fill:#f8fbff,stroke:#3b7dd8,stroke-width:1px
+    style Phone fill:#f6fcf6,stroke:#3fa34d,stroke-width:1px
+    style TV fill:#faf7fd,stroke:#8a4fd1,stroke-width:1px
+    style Shared fill:#fafafa,stroke:#999,stroke-width:1px,stroke-dasharray: 4 3
 ```
 
 Each device runs the same shape of pipeline — read/receive data, correct its
