@@ -36,6 +36,16 @@ struct ContentView: View {
                     // WorkoutTransport, for a physical Watch-paired iPhone.
                     Toggle("Simulated Data", isOn: $useSimulatedData)
                         .toggleStyle(.button)
+                        .onChange(of: useSimulatedData) { _, _ in
+                            // Without this, switching sources while relaying
+                            // leaves the TV watching the *old* source even
+                            // though the phone's own overlay switched --
+                            // silently showing different data on each screen.
+                            if isRelayingToTV {
+                                relayHost.stop()
+                                relayHost.start(sampleSource: activeSampleSource)
+                            }
+                        }
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     VStack(alignment: .trailing, spacing: 2) {

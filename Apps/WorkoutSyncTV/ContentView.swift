@@ -12,7 +12,25 @@ struct ContentView: View {
 
     var body: some View {
         if let relayClient {
-            connectedView(relayClient)
+            switch relayClient.connectionState {
+            case .connecting:
+                ProgressView("Connecting to iPhone…")
+                    .padding()
+            case .failed:
+                VStack(spacing: 16) {
+                    Text("Couldn't connect")
+                        .font(.title3)
+                    Text("Check the code is still shown on your iPhone and try again.")
+                        .foregroundStyle(.secondary)
+                    Button("Try Again") {
+                        relayClient.stop()
+                        self.relayClient = nil
+                    }
+                }
+                .padding()
+            case .connected:
+                connectedView(relayClient)
+            }
         } else {
             pairingView
         }

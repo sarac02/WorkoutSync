@@ -101,7 +101,16 @@ final class WorkoutSessionManager: NSObject {
     func stop() {
         session?.end()
         builder?.endCollection(withEnd: Date()) { [weak self] _, _ in
-            self?.builder?.finishWorkout { _, _ in }
+            // HealthKit calls this completion on an arbitrary queue, not
+            // necessarily the main actor -- hop back before touching
+            // `builder`, which is main-actor-isolated state. (There's no
+            // completion-free async overload of finishWorkout on
+            // HKLiveWorkoutBuilder to use instead, despite the compiler's
+            // "consider using asynchronous alternative" nudge -- verified
+            // by trying it, not assumed.)
+            Task { @MainActor in
+                self?.builder?.finishWorkout { _, _ in }
+            }
         }
         dropoutCheckTask?.cancel()
         isRunning = false

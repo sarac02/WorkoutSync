@@ -11,7 +11,15 @@ import WorkoutModel
 /// average-effort baseline) -- kept as simple parameters here so this view
 /// has no dependency on wherever a real app sources that metadata from.
 public struct VideoOverlayContainer: View {
-    private let player: AVPlayer
+    // Must be @State, not a plain `let`: this is a View *struct*, so its
+    // stored properties get reconstructed from scratch every time a parent
+    // view's body re-evaluates for any reason (e.g. toggling an unrelated
+    // toolbar switch), even though SwiftUI keeps this view's *identity* and
+    // so never re-fires onAppear/onDisappear. A plain `let AVPlayer` would
+    // get silently replaced by a fresh, paused player on every such
+    // re-render, and since onAppear (which calls .play()) never fires again
+    // for the same identity, the video would just freeze.
+    @State private var player: AVPlayer
     private let sampleSource: any WorkoutSampleSource
     @State private var timeline = WorkoutOverlayTimeline()
     private let goalEnergy: Double
@@ -28,7 +36,7 @@ public struct VideoOverlayContainer: View {
         goalEnergy: Double = 400,
         referenceEnergy: Double = 250
     ) {
-        self.player = AVPlayer(url: videoURL)
+        _player = State(initialValue: AVPlayer(url: videoURL))
         self.sampleSource = sampleSource
         self.goalEnergy = goalEnergy
         self.referenceEnergy = referenceEnergy
